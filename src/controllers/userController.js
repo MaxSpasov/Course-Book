@@ -9,10 +9,10 @@ router.get('/login', (req, res) => {
 });
 
 router.post('/login', async (req, res) => {
-    const { username, password } = req.body;
+    const { email, password } = req.body;
 
     try {
-        const token = await userManager.login(username, password);
+        const token = await userManager.login(email, password);
 
         res.cookie(TOKEN_KEY, token);
 
@@ -27,10 +27,10 @@ router.get('/register', (req, res,) => {
 });
 
 router.post('/register', async (req, res, next) => {
-    const { username, password, repeatPassword, address } = req.body;
+    const { username, email, password, repeatPassword } = req.body;
 
     try {
-        const token = await userManager.register({ username, password, repeatPassword, address });
+        const token = await userManager.register({ username, email, password, repeatPassword });
 
         res.cookie(TOKEN_KEY, token);
         res.redirect('/');
