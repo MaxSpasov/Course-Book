@@ -5,17 +5,25 @@ const photoSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Name is required'],
     },
-    technique: {
+    type: {
         type: String,
-        required: [true, 'Kind is required'],
+        required: [true, 'Type is required'],
+    },
+    certificate: {
+        type: String,
+        required: [true, 'Description is required'],
     },
     image: {
         type: String,
         required: [true, 'ImageUrl is required'],
     },
-    certificate: {
+    description: {
         type: String,
         required: [true, 'Description is required'],
+    },
+    price: {
+        type: String,
+        required: [true, 'Price is required'],
     },
     owner: {
         type: mongoose.Types.ObjectId,
