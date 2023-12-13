@@ -1,29 +1,13 @@
 <main>
-
-  <section id="login-container">
-
-    <div class="container">
-      <!-- Do not forget to change the path to the image -->
-      <img src="/img/slider.jpg" alt="image">
-
-      <form action="#" method="POST" class="container-text">
-        <h2>Login</h2>
-        <p>Welcome, see the new masterpieces!</p>
-
-        <label for="username">Username:</label>
-        <input type="text" id="username" placeholder="ivan_00" name="username">
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" placeholder="*****" name="password">
-
-        <button class="login-btn">Login</button>
-        <div class="card-no-account">
-          <p>Don't have an account? <a href="/users/register">Sign up</a>.</p>
-        </div>
-
-      </form>
-    </div>
-
-  </section>
-
+  <div class="login-box">
+    <h1>Login</h1>
+    <form action="#" method="POST">
+      <label>Email</label>
+      <input type="text" placeholder="Email.." name="email">
+      <label>Password</label>
+      <input type="password" placeholder="Password.." name="password">
+      <input type="submit" value="Submit">
+    </form>
+    <p>Not have an account? <a href="/users/register">Register here</a></p>
+  </div>
 </main>
