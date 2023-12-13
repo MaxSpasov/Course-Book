@@ -25,6 +25,9 @@ const photoSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Price is required'],
     },
+    signUpList: {
+        type: Array,
+    }, 
     owner: {
         type: mongoose.Types.ObjectId,
         ref: 'User',
